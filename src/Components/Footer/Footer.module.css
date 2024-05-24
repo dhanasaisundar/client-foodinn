@@ -1,0 +1,49 @@
+.footerContainer {
+  background-color: var(--color-grey-800);
+  font-family: outfit;
+  margin-bottom: 0;
+  color: white;
+}
+
+.footerContent {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  padding: 2rem;
+  column-gap: 1.3rem;
+}
+
+.footerContent p {
+  margin: 0.5rem 0;
+  color: var(--color-grey-300);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoContainer h1 {
+  text-transform: uppercase;
+}
+
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/*#########################################################################*/
+@media screen and (max-width: 768px) {
+  .logoInfo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 3rem;
+  }
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

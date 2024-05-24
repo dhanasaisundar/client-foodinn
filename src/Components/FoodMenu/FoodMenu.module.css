@@ -1,0 +1,114 @@
+.foodMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.foodListContainerAll {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin: 2rem 0;
+}
+
+.foodListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin: 2rem 0;
+}
+.foodMenuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: 0.3s;
+}
+.foodMenuItem:hover {
+  transform: scale(0.95);
+  transition: 0.1s ease;
+}
+.foodImg {
+  border-radius: 3rem;
+}
+
+.infoContainer {
+  padding: 0.5rem;
+}
+
+.foodInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foodInfo p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.foodInfo img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ratingContainer span {
+  font-weight: bold;
+}
+
+.price {
+  font-weight: 600;
+}
+.cartBtnCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.addCartBtn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--color-yellow-400);
+  border-radius: 1rem;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.addCartBtn:hover {
+  background-color: var(--color-yellow-400);
+  cursor: pointer;
+  box-shadow: 0 0 10px #fef08a, 0 0 40px #fef08a, 0 0 80px #fef08a;
+}
+
+.btns {
+  display: flex;
+}
+
+/*#########################################################################*/
+@media screen and (max-width: 768px) {
+  .foodListContainerAll {
+    grid-template-columns: 1fr;
+  }
+  .foodListContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .foodListContainerAll {
+    grid-template-columns: 1fr 1fr;
+  }
+  .foodListContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

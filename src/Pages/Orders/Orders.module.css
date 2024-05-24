@@ -1,0 +1,42 @@
+.ordersPage {
+  width: 100%;
+  min-height: 100vh;
+}
+.ordersContainer {
+  width: 100%;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+.order {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  border: dotted 2px var(--color-grey-500);
+}
+.orderInfo {
+  border-top: dotted 1.5px var(--color-grey-500);
+  margin-top: 0.5rem;
+}
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0.3rem;
+}
+
+.orderItem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5rem;
+}
+
+.totalPaid {
+  color: var(--color-green-700);
+  margin-top: 0.3rem;
+  font-weight: 700;
+}
+.paymentInfo {
+  margin-top: 0.3rem;
+}

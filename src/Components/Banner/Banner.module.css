@@ -1,0 +1,40 @@
+.bannerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+.bannerHeadCon {
+  width: fit-content;
+}
+.bannerHeadCon div {
+  font-size: 2rem;
+}
+.storeLinks {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+.store {
+  display: inline-block;
+  text-decoration: none;
+  height: 64px;
+}
+.storeLinks img {
+  height: 64px;
+}
+/*#########################################################################*/
+@media screen and (max-width: 768px) {
+  .bannerContainer {
+    flex-direction: column;
+  }
+  .bannerHeadCon {
+    width: 100%;
+    text-align: center;
+  }
+  .storeLinks {
+    width: 100%;
+    justify-content: center;
+  }
+}

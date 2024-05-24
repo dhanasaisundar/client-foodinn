@@ -1,0 +1,6 @@
+.hrLine {
+  width: 100%;
+  height: 2px;
+  color: var(--color-grey-100);
+  margin: 1rem 0;
+}

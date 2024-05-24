@@ -1,0 +1,33 @@
+.loading {
+  display: inline-block;
+}
+
+.loadingDot1,
+.loadingDot2,
+.loadingDot3 {
+  animation: loadingAnimation 1s infinite ease;
+  opacity: 0;
+  display: inline-block;
+  margin: 1px;
+  font-size: 1.5rem;
+}
+
+.loadingDot2 {
+  animation-delay: 0.1s;
+}
+
+.loadingDot3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

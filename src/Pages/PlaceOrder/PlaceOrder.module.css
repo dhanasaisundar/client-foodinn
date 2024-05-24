@@ -1,0 +1,65 @@
+.placeOrder {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  gap: 2rem;
+}
+
+.placeOrderLeft {
+  width: 100%;
+  max-width: max(30%, 500px);
+}
+
+.placeOrderLeft .title {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.placeOrderLeft input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+  border: 2px solid var(--color-grey-500);
+  border-radius: 3px;
+  outline-color: #fde047;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.placeOrderLeft input::placeholder {
+  font-size: 1rem;
+}
+.placeOrderLeft button {
+  border: none;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 0.7rem;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: outfit;
+  background-color: var(--color-yellow-400);
+}
+.inputField {
+  display: flex;
+  gap: 10px;
+}
+
+.placeOrderRight {
+  width: 100%;
+  max-width: max(40%, 500px);
+}
+
+@media screen and (max-width: 768px) {
+  .placeOrder {
+    flex-direction: column;
+  }
+  .placeOrderLeft button {
+    display: block;
+    margin-inline: auto;
+  }
+}

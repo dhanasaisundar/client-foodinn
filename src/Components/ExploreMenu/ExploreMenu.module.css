@@ -1,0 +1,30 @@
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.6rem 0;
+  font-family: "Basis Grotesque Pro", Arial, sans-serif;
+}
+.exploreMenuContainer {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.menuItem:hover {
+  cursor: pointer;
+}
+.active {
+  border-radius: 50%;
+  border: 5px solid var(--color-yellow-400);
+  padding: 5px;
+}

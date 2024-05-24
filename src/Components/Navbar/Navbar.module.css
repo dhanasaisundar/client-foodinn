@@ -1,0 +1,177 @@
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+  padding-right: 0.5rem;
+  gap: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoContainer h1 {
+  /* font-family: "Courier New", Courier, monospace; */
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+.logo {
+  cursor: pointer;
+  animation: logoAnimate 0.5s infinite ease;
+  backface-visibility: hidden;
+}
+
+@keyframes logoAnimate {
+  0% {
+    transform: rotate(-10deg);
+  }
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3.5rem;
+}
+
+.navMenu li {
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navMenu li:hover {
+  color: var(--color-yellow-500);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navIcons button {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--color-yellow-400);
+  border-radius: 1rem;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.navIcons button:hover {
+  background-color: var(--color-yellow-400);
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: var(--color-grey-500);
+}
+.cartContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.cartLink {
+  position: relative;
+}
+.cartLength {
+  color: var(--color-yellow-950);
+  background-color: var(--color-yellow-200);
+  padding: 5px 8px;
+  border-radius: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: -16px;
+  right: -17px;
+  z-index: 1;
+}
+.hamburgerCon {
+  display: none;
+  position: relative;
+}
+.hamburgerCon button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.hamburgerCon button:hover {
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  position: absolute;
+  top: 20;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0% 1rem;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.navLinks {
+  list-style: none;
+  text-decoration: none;
+  font-size: 4vw;
+  color: black;
+  font-weight: 800;
+}
+.username {
+  color: inherit;
+}
+/*###########################################################################*/
+@media screen and (max-width: 767px) {
+  .navIcons {
+    display: none;
+  }
+  .navMenu {
+    display: none;
+  }
+  .hamburgerCon {
+    display: block;
+  }
+}
+/*###########################################################################*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logoContainer img {
+    width: 1.7rem;
+  }
+  .logoContainer h1 {
+    font-size: 1.5rem;
+  }
+  .navMenu {
+    gap: 1.5rem;
+  }
+  .navMenu span {
+    font-size: 1rem;
+  }
+  .navMenu li {
+    gap: 0.5rem;
+  }
+  .profile img {
+    width: 1.2rem;
+  }
+  .profile h2 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+.primary {
+  border: none;
+  border-radius: 8px;
+  align-self: center;
+  width: fit-content;
+  padding: 0.7rem;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: outfit;
+}
+
+.linkBtn {
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: rgb(20, 138, 255);
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.linkBtn:hover {
+  color: rgb(3, 90, 231);
+  cursor: pointer;
+}
