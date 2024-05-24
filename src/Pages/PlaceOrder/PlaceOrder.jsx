@@ -60,7 +60,7 @@ function PlaceOrder() {
   async function makePayment(e) {
     e.preventDefault();
     const stripePublicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
-
+    setLoading(true);
     try {
       const stripe = await loadStripe(stripePublicKey);
       const customer = {
@@ -107,6 +107,7 @@ function PlaceOrder() {
     } catch (error) {
       console.error("Error making payment:", error);
     }
+    setLoading(false);
   }
 
   return (
