@@ -190,7 +190,9 @@ function PlaceOrder() {
             <b>Total</b>
             <b> &#8377;{totalFee}</b>
           </div>
-          <Button onClick={makePayment}>Pay Now</Button>
+          <Button onClick={makePayment}>
+            {loading ? "Loading..." : "Pay Now"}{" "}
+          </Button>
         </div>
       </div>
     </form>
