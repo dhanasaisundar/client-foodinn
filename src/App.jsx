@@ -6,7 +6,7 @@ import Home from "./Pages/Home/Home";
 import AppLayout from "./AppLayout";
 import Cart from "./Pages/Cart/Cart";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
-import SuccessfullPayment from "./Components/Payments/SuccessfullPayment";
+import SuccessfulPayment from "./Components/Payments/SuccessfulPayment";
 import CancelledPayment from "./Components/Payments/CancelledPayment";
 import Orders from "./Pages/Orders/Orders";
 import Drinks from "./Pages/Drinks/Drinks";
@@ -15,9 +15,11 @@ import PageNotFound from "./Components/PageNotFound/PageNotFound";
 
 function App() {
   const [auth, setAuth] = useState(false);
+
   function handleAuthBtn() {
     setAuth((prevState) => !prevState);
   }
+
   return (
     <>
       <Router>
@@ -36,7 +38,7 @@ function App() {
             <Route path="/drinks" element={<Drinks />} />
             <Route path="/account" element={<Account />} />
           </Route>
-          <Route path="/payment/successfull" element={<SuccessfullPayment />} />
+          <Route path="/payment/successful" element={<SuccessfulPayment />} />
           <Route path="/payment/cancel" element={<CancelledPayment />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
@@ -55,7 +57,6 @@ function App() {
           error: {
             duration: 5000,
           },
-
           style: {
             borderRadius: "12px",
             backgroundColor: "var(--color-grey-0)",

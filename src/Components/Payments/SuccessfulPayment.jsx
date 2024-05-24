@@ -12,7 +12,7 @@ import styles from "./Payments.module.css";
 import { apiOrder } from "../../services/apiOrder";
 import toast from "react-hot-toast";
 
-function SuccessfullPayment() {
+function SuccessfulPayment() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector(getCart);
@@ -63,5 +63,5 @@ function SuccessfullPayment() {
   );
 }
 
-export default SuccessfullPayment;
-//4000003560000123
+export default SuccessfulPayment;
+
