@@ -63,20 +63,6 @@ function PlaceOrder() {
 
     try {
       const stripe = await loadStripe(stripePublicKey);
-
-      if (
-        !name ||
-        !userInfo ||
-        !city ||
-        !state ||
-        !pincode ||
-        !country ||
-        !cart
-      ) {
-        console.error("Missing required customer or cart information");
-        return;
-      }
-
       const customer = {
         name: name,
         address: {
