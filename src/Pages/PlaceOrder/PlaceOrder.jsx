@@ -20,6 +20,7 @@ function PlaceOrder() {
   const [country, setCountry] = useState(userInfo.country || "");
   const [phone, setPhone] = useState(userInfo.phoneNumber || "");
   const [loading, setLoading] = useState(false);
+  const [paying, setPaying] = useState(false);
 
   const cart = useSelector(getCart);
   const totalPrice = useSelector(getTotalCartPrice);
@@ -60,7 +61,7 @@ function PlaceOrder() {
   async function makePayment(e) {
     e.preventDefault();
     const stripePublicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
-    setLoading(true);
+    setPaying(true);
     try {
       const stripe = await loadStripe(stripePublicKey);
       const customer = {
@@ -107,7 +108,7 @@ function PlaceOrder() {
     } catch (error) {
       console.error("Error making payment:", error);
     }
-    setLoading(false);
+    setPaying(false);
   }
 
   return (
@@ -192,7 +193,7 @@ function PlaceOrder() {
             <b> &#8377;{totalFee}</b>
           </div>
           <Button onClick={makePayment}>
-            {loading ? "Loading..." : "Pay Now"}{" "}
+            {paying ? "Loading..." : "Pay Now"}{" "}
           </Button>
         </div>
       </div>
